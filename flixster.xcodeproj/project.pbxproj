@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAA8C8DD220E555000253F2B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA8C8DC220E555000253F2B /* DetailsViewController.swift */; };
 		BAB063BD22067EA40055750C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB063BC22067EA40055750C /* AppDelegate.swift */; };
 		BAB063C222067EA40055750C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB063C022067EA40055750C /* Main.storyboard */; };
 		BAB063C422067EA50055750C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB063C322067EA50055750C /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		09D354E3B596C0C66767F696 /* Pods-flixster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flixster/Pods-flixster.debug.xcconfig"; sourceTree = "<group>"; };
+		BAA8C8DC220E555000253F2B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		BAB063B922067EA40055750C /* flixster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flixster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB063BC22067EA40055750C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB063C122067EA40055750C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				BAB063C822067EA50055750C /* Info.plist */,
 				BAB063D022067F200055750C /* MoviesViewController.swift */,
 				BAB063D222068E7E0055750C /* MovieTableViewCell.swift */,
+				BAA8C8DC220E555000253F2B /* DetailsViewController.swift */,
 			);
 			path = flixster;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				BAB063BD22067EA40055750C /* AppDelegate.swift in Sources */,
 				BAB063D122067F200055750C /* MoviesViewController.swift in Sources */,
 				BAB063D322068E7E0055750C /* MovieTableViewCell.swift in Sources */,
+				BAA8C8DD220E555000253F2B /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
