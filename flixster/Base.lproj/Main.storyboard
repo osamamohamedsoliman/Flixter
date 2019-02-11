@@ -48,6 +48,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="posterView" destination="sv3-yh-WYt" id="EWk-8e-SuT"/>
+                                            <segue destination="c8n-du-96a" kind="show" id="vHd-xl-sDl"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -170,11 +171,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-zF-riz">
-                                <rect key="frame" x="0.0" y="64" width="375" height="189"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="189" id="xoE-ag-0nM"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-zF-riz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="222.5"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-CL-xmB">
                                 <rect key="frame" x="16" y="215" width="105" height="120"/>
@@ -184,7 +182,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-jX-uJM">
-                                <rect key="frame" x="129" y="261" width="230" height="54"/>
+                                <rect key="frame" x="129" y="294.5" width="230" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -224,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ok-wH-OsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1290" y="1610"/>
+            <point key="canvasLocation" x="-506" y="1628"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="8me-A3-zn1">
@@ -287,4 +285,7 @@
         <image name="nowplaying-103" width="36" height="36"/>
         <image name="superhero-51" width="37.5" height="37.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vHd-xl-sDl"/>
+    </inferredMetricsTieBreakers>
 </document>

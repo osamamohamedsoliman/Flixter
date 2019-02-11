@@ -69,7 +69,7 @@ class GridViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
 
-    /*
+    
     // MARK: - Navigation
 
      
@@ -77,8 +77,13 @@ class GridViewController: UIViewController, UICollectionViewDataSource, UICollec
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        let cell = sender as! UICollectionViewCell
+        let indexPath = CollectionView.indexPath(for: cell)
+        let movie = Movies[indexPath!.item]
+        let detailsViewController = segue.destination as! DetailsViewController
+        detailsViewController.movie = movie
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }
