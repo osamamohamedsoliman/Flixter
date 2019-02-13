@@ -16,6 +16,7 @@
 		BAB063D322068E7E0055750C /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB063D222068E7E0055750C /* MovieTableViewCell.swift */; };
 		BAB09528221108BB000DC6B1 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB09527221108BB000DC6B1 /* GridViewController.swift */; };
 		BAB0952A22111548000DC6B1 /* MoviewGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0952922111548000DC6B1 /* MoviewGridCell.swift */; };
+		BAB0952C2213ABC3000DC6B1 /* TrailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB0952B2213ABC3000DC6B1 /* TrailerViewController.swift */; };
 		DCDB76F9E2E1B5C586FB140A /* Pods_flixster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD38A62CB6EEA357BD984DD /* Pods_flixster.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		BAB063D222068E7E0055750C /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		BAB09527221108BB000DC6B1 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		BAB0952922111548000DC6B1 /* MoviewGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewGridCell.swift; sourceTree = "<group>"; };
+		BAB0952B2213ABC3000DC6B1 /* TrailerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerViewController.swift; sourceTree = "<group>"; };
 		BFD38A62CB6EEA357BD984DD /* Pods_flixster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flixster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BAAF4AEA70C28565A0554E /* Pods-flixster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixster.release.xcconfig"; path = "Pods/Target Support Files/Pods-flixster/Pods-flixster.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				BAA8C8DC220E555000253F2B /* DetailsViewController.swift */,
 				BAB09527221108BB000DC6B1 /* GridViewController.swift */,
 				BAB0952922111548000DC6B1 /* MoviewGridCell.swift */,
+				BAB0952B2213ABC3000DC6B1 /* TrailerViewController.swift */,
 			);
 			path = flixster;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			files = (
 				BAB063BD22067EA40055750C /* AppDelegate.swift in Sources */,
 				BAB09528221108BB000DC6B1 /* GridViewController.swift in Sources */,
+				BAB0952C2213ABC3000DC6B1 /* TrailerViewController.swift in Sources */,
 				BAB0952A22111548000DC6B1 /* MoviewGridCell.swift in Sources */,
 				BAB063D122067F200055750C /* MoviesViewController.swift in Sources */,
 				BAB063D322068E7E0055750C /* MovieTableViewCell.swift in Sources */,

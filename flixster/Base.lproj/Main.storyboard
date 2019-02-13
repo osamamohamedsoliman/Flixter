@@ -171,19 +171,24 @@
         <scene sceneID="Uc7-HU-kG4">
             <objects>
                 <viewController id="c8n-du-96a" customClass="DetailsViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="puc-Hf-6wb">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="puc-Hf-6wb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUf-zF-riz">
                                 <rect key="frame" x="0.0" y="64" width="375" height="222.5"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-CL-xmB">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-CL-xmB">
                                 <rect key="frame" x="16" y="215" width="105" height="120"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="CWg-6L-JUb"/>
                                     <constraint firstAttribute="width" constant="105" id="fIN-Aa-n2z"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="eZY-NL-vfz" appends="YES" id="17l-7n-tD1"/>
+                                    <outletCollection property="gestureRecognizers" destination="eZY-NL-vfz" appends="YES" id="nMg-XG-dps"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAw-jX-uJM">
                                 <rect key="frame" x="129" y="294.5" width="230" height="20.5"/>
@@ -225,8 +230,47 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ok-wH-OsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eZY-NL-vfz">
+                    <connections>
+                        <segue destination="VNc-tD-bEv" kind="presentation" id="m2w-lT-sTy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-506" y="1628"/>
+        </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="TrP-E0-LbQ">
+            <objects>
+                <viewController id="VNc-tD-bEv" customClass="TrailerViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mh8-4j-tSo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBm-pf-zbs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sBm-pf-zbs" firstAttribute="leading" secondItem="TfY-uo-h9X" secondAttribute="leading" id="0gg-6X-1rE"/>
+                            <constraint firstItem="sBm-pf-zbs" firstAttribute="trailing" secondItem="TfY-uo-h9X" secondAttribute="trailing" id="MOU-0U-isZ"/>
+                            <constraint firstAttribute="bottom" secondItem="sBm-pf-zbs" secondAttribute="bottom" id="YAo-dP-JXq"/>
+                            <constraint firstItem="sBm-pf-zbs" firstAttribute="top" secondItem="mh8-4j-tSo" secondAttribute="top" id="jeR-lm-efB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TfY-uo-h9X"/>
+                    </view>
+                    <connections>
+                        <outlet property="TrailerWebView" destination="sBm-pf-zbs" id="pT9-7d-399"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhR-kw-75o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-506.39999999999998" y="2467.9160419790105"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="8me-A3-zn1">

@@ -44,6 +44,11 @@ class DetailsViewController: UIViewController {
     }
     
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailsViewController = segue.destination as! TrailerViewController
+        detailsViewController.movie = movie
+    }
     /*
     // MARK: - Navigation
 
