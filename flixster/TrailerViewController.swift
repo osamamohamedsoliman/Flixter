@@ -24,8 +24,12 @@ class TrailerViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("hello")
-        let url = URL(string: "https://api.themoviedb.org/3/movie/\(String(describing: movie["id"]))/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US")!
+        let movieID = movie["id"] as! Int
+        let StringMovieID = String(movieID)
+        let URLMovie = "https://api.themoviedb.org/3/movie/" + StringMovieID + "/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US"
+
+        
+        let url = URL(string: URLMovie)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -35,8 +39,13 @@ class TrailerViewController: UIViewController, WKUIDelegate {
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                let key = dataDictionary["key"] as! String
-                let viewURL = URL(string:"https://www.youtube.com/watch?v=\(key)")
+                
+                let dataNeeded = dataDictionary["results"] as! [[String : Any]]
+                let info = dataNeeded[0]
+                let MovieKey = info["key"] as! String
+//                print(neededInfo)
+                let stringViewURL = "https://www.youtube.com/watch?v=" + MovieKey
+                let viewURL = URL(string:stringViewURL)
                 let myRequest = URLRequest(url: viewURL!)
                 self.TrailerWebView.load(myRequest)
                 // TODO: Store the movies in a property to use elsewhere
